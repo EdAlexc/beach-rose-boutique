@@ -1,67 +1,92 @@
-import { Heart, Instagram, Twitter, Facebook } from "lucide-react";
+import { Heart, Instagram, Twitter, Facebook, Youtube, ChevronDown } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-background border-t border-border">
-      <div className="max-w-6xl mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
-          {/* Brand */}
-          <div className="col-span-1">
-            <h3 className="text-xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
-              BeachWear
-            </h3>
-            <p className="text-muted-foreground text-sm mb-4">
-              Premium beachwear designed for the modern, confident man.
-            </p>
-            <div className="flex space-x-4">
-              <Instagram className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
-              <Twitter className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
-              <Facebook className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+    <footer className="bg-muted/30 py-16">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="grid md:grid-cols-2 gap-12 mb-12">
+          {/* Left Column */}
+          <div className="space-y-8">
+            {/* Customer Service */}
+            <div>
+              <h3 className="text-sm font-semibold text-muted-foreground mb-4 tracking-wider uppercase">
+                Customer Service
+              </h3>
+              <ul className="space-y-2 text-sm">
+                <li><a href="/customer-service" className="hover:text-primary transition-colors">Contact Us</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">FAQ</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Shipping Info</a></li>
+                <li><a href="/returns" className="hover:text-primary transition-colors">Returns & Exchanges</a></li>
+              </ul>
+            </div>
+
+            {/* Information */}
+            <div>
+              <h3 className="text-sm font-semibold text-muted-foreground mb-4 tracking-wider uppercase">
+                Information
+              </h3>
+              <ul className="space-y-2 text-sm">
+                <li><a href="/about" className="hover:text-primary transition-colors">About Us</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Privacy Policy</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Terms of Service</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Size Guide</a></li>
+              </ul>
+            </div>
+
+            {/* Contact Us */}
+            <div>
+              <h3 className="text-sm font-semibold text-muted-foreground mb-4 tracking-wider uppercase">
+                Contact Us
+              </h3>
+              <ul className="space-y-2 text-sm">
+                <li>Email: hello@beachwear.com</li>
+                <li>Phone: 1-800-BEACH-1</li>
+                <li>Live Chat Available</li>
+              </ul>
             </div>
           </div>
 
-          {/* Shop */}
-          <div>
-            <h4 className="font-semibold mb-4">Shop</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">New Arrivals</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Swim Shorts</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Tank Tops</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Accessories</a></li>
-            </ul>
-          </div>
+          {/* Right Column - Brand & Social */}
+          <div className="text-center">
+            <div className="mb-8">
+              <div className="flex items-center justify-center mb-4">
+                <Heart className="h-6 w-6 text-primary mr-2" />
+                <h2 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+                  BEACHWEAR
+                </h2>
+              </div>
+            </div>
 
-          {/* Support */}
-          <div>
-            <h4 className="font-semibold mb-4">Support</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="/customer-service" className="hover:text-primary transition-colors">Customer Service</a></li>
-              <li><a href="/returns" className="hover:text-primary transition-colors">Returns</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Size Guide</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">FAQ</a></li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="font-semibold mb-4">Company</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="/about" className="hover:text-primary transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Terms of Service</a></li>
-              <li><a href="/subscribe" className="hover:text-primary transition-colors">Newsletter</a></li>
-            </ul>
+            {/* Social Media */}
+            <div className="flex justify-center space-x-6 mb-8">
+              <Instagram className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+              <Facebook className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+              <Youtube className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+              <Twitter className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+            </div>
           </div>
         </div>
 
-        <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-muted-foreground">
-            © 2024 BeachWear. All rights reserved.
-          </p>
-          <div className="flex items-center space-x-1 text-sm text-muted-foreground">
-            <span>Made with</span>
-            <Heart className="h-4 w-4 text-red-500 fill-current" />
-            <span>for the community</span>
+        {/* Bottom Section */}
+        <div className="border-t border-border pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            {/* Currency & Language */}
+            <div className="flex items-center space-x-6 text-sm">
+              <div className="flex items-center space-x-1 cursor-pointer">
+                <span className="text-primary font-semibold">CA</span>
+                <span>Canada (CAD $)</span>
+                <ChevronDown className="h-4 w-4" />
+              </div>
+              <div className="flex items-center space-x-1 cursor-pointer">
+                <span>English</span>
+                <ChevronDown className="h-4 w-4" />
+              </div>
+            </div>
+
+            {/* Copyright */}
+            <p className="text-sm text-muted-foreground">
+              © 2024 BeachWear. All rights reserved.
+            </p>
           </div>
         </div>
       </div>
