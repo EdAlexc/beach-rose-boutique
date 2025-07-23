@@ -35,7 +35,7 @@ const Home = () => {
         className="relative h-screen flex items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-float">
             Beachwear
@@ -47,10 +47,10 @@ const Home = () => {
             Premium clothing designed for the modern, confident man
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+            <Button size="lg" className="bg-white hover:bg-white/90 text-black">
               Shop Collection
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-foreground">
+            <Button size="lg" variant="outline" className="border-white text-black bg-white/90 hover:bg-white">
               Explore Styles
             </Button>
           </div>
@@ -60,14 +60,7 @@ const Home = () => {
       {/* Features Section */}
       <section className="py-16 bg-gradient-soft">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center">
-                <Truck className="h-8 w-8 text-primary-foreground" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Free Shipping</h3>
-              <p className="text-muted-foreground">Free shipping on orders over $75</p>
-            </div>
+          <div className="grid md:grid-cols-2 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-4 bg-secondary rounded-full flex items-center justify-center">
                 <Heart className="h-8 w-8 text-secondary-foreground" />
@@ -91,7 +84,7 @@ const Home = () => {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Summer Essentials
+              Featured Items
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Discover our handpicked collection of premium beachwear designed for style, comfort, and confidence.
